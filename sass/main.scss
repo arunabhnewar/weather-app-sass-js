@@ -1,0 +1,55 @@
+@import './common';
+
+.search_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    input, button {
+        border: 0;
+        outline: 0;
+        padding: 10px 12px;
+    }
+    input {
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 105%;
+        width: calc(100% - 650px);
+        background: #000000d0;
+        color: #fff;
+    }
+    button {
+        border-radius: 5px;
+        height: 44px;
+        width: 84px;
+        cursor: pointer;
+        background: #000000d0;
+        color: #fff;
+        margin-left: 5px;
+    }
+}
+
+.inner_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left_content, .right_content {
+        background: #000000d0;
+        color: #fff;
+        padding: 2em;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 450px;
+        margin: 1em;
+    }
+    .temp {
+        padding-top: 15px;
+    }
+    .weather_condition {
+        margin: 20px 0 5px 0;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+    }
+}

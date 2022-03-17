@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-----custom css------>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-----custom icons---->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="search_area">
+            <input id="search_field" type="text" placeholder="Search location">
+            <button id="search_btn">
+                <span class="material-icons-outlined">
+                    search
+                </span>
+            </button>
+        </div>
+
+
+        <div class="inner_container">
+            <div class="left_content">
+                <h2 class="city"></h2>
+                <h1 class="temp"></h1>
+
+                <div class="weather_condition">
+                    <img class="icon" src="" alt="" />
+
+                    <span class="condition_description"></span>
+                </div>
+
+                <div class="wind"> 5.5 </div>
+                <div class="humidity"></div>
+            </div>
+
+            <div class="right_content">
+                <h3>Search History</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
