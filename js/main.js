@@ -129,6 +129,7 @@
                 console.log(error);
             })
             .finally(() => {
+                searchField.value = "";
                 showOnUI();
                 console.log(weatherInfo);
             })

@@ -42,6 +42,9 @@
         width: 100%;
         max-width: 450px;
         margin: 1em;
+        box-shadow: 2px 7px 13px -1px rgba(205, 247, 253, 0.75);
+        -webkit-box-shadow: 2px 7px 13px -1px rgba(205, 247, 253, 0.75);
+        -moz-box-shadow: 2px 7px 13px -1px rgba(205, 247, 253, 0.75);
     }
     .temp {
         padding-top: 15px;
