@@ -53,7 +53,7 @@
 
         },
             (error) => {
-                const uri = `https://api.openweathermap.org/data/2.5/weather?q=chittagong&appid=${api}`;
+                const uri = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
 
                 fetch(uri)
                     .then(res => res.json())
