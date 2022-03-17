@@ -101,38 +101,43 @@
     searchBtn.addEventListener('click', function (e) {
         let searchInput = searchField.value;
 
-        const uri = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${api}`;
+        if (searchField.value === "") {
+            alert('Please insert a valid location');
+        } else {
+            const uri = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&appid=${api}`;
 
-        fetch(uri)
-            .then(res => res.json())
-            .then((data) => {
-                const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-                const city = data.name;
-                const country = data.sys.country;
-                const condition = data.weather[0].description;
-                const temp = data.main.temp - 273.15;
-                const humidity = data.main.humidity;
-                const wind = data.wind.speed;
+            fetch(uri)
+                .then(res => res.json())
+                .then((data) => {
+                    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+                    const city = data.name;
+                    const country = data.sys.country;
+                    const condition = data.weather[0].description;
+                    const temp = data.main.temp - 273.15;
+                    const humidity = data.main.humidity;
+                    const wind = data.wind.speed;
 
 
-                weatherInfo = {
-                    icon,
-                    city,
-                    country,
-                    condition,
-                    temp,
-                    humidity,
-                    wind
-                }
-            })
-            .catch(error => {
-                console.log(error);
-            })
-            .finally(() => {
-                searchField.value = "";
-                showOnUI();
-                console.log(weatherInfo);
-            })
+                    weatherInfo = {
+                        icon,
+                        city,
+                        country,
+                        condition,
+                        temp,
+                        humidity,
+                        wind
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+                .finally(() => {
+                    searchField.value = "";
+                    showOnUI();
+                    console.log(weatherInfo);
+                })
+        }
+
     })
 
 
