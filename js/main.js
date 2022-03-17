@@ -96,7 +96,6 @@
         description.innerText = weatherInfo?.condition;
         humidity.innerText = "Humidity : " + weatherInfo?.humidity + "%";
         wind.innerText = "Wind Speed : " + weatherInfo?.wind + "k.m/h";
-        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + city + "')"
     }
 
     searchBtn.addEventListener('click', function (e) {
