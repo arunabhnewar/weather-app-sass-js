@@ -30,7 +30,7 @@
 }
 
 .inner_container {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,13 +46,32 @@
         -webkit-box-shadow: 2px 5px 9px -1px rgba(205, 247, 253, 0.75);
         -moz-box-shadow: 2px 5px 9px -1px rgba(205, 247, 253, 0.75);
     }
+    #city_temp {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
     .temp {
         padding-top: 15px;
+    }
+    #convert_btn {
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 0;
     }
     .weather_condition {
         margin: 20px 0 5px 0;
         display: flex;
         justify-content:flex-start;
         align-items: center;
+    }
+    .history_card {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
 }

@@ -32,7 +32,10 @@
         <div class="inner_container">
             <div class="left_content">
                 <h2 class="city"></h2>
-                <h1 class="temp"></h1>
+                <div id="city_temp">
+                    <h1 class="temp"> <span class="temp_unit"></span> </h1>
+                    <button id="convert_btn">Convert Temperature</button>
+                </div>
 
                 <div class="weather_condition">
                     <img class="icon" src="" alt="" />
@@ -46,6 +49,21 @@
 
             <div class="right_content">
                 <h2>Recent Search History</h2>
+
+                <div id="search_history">
+                    <!-- <div class="history_card">
+                        <div class="history_icon">
+                            <img class="icon" src="" alt="" />
+                        </div>
+
+                        <div class="history_detail">
+                            <h4>Raojān, BD</h4>
+                            <p class="history_condition">broken clouds</p>
+                            <p class="history_wind">Wind Speed : 1.28k.m/h</p>
+                            <p class="history_humidity">Humidity : 23%</p>
+                        </div>
+                    </div> -->
+                </div>
             </div>
         </div>
 
