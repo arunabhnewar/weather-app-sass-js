@@ -93,12 +93,11 @@
     // Show the data on UI
     function showOnUI() {
         icon.src = weatherInfo?.icon;
-        city.innerText = "Weather in " + weatherInfo?.city + ", " + weatherInfo?.country;
-        temp.innerText = weatherInfo?.temp.toFixed(2) + "°C";
-        description.innerText = weatherInfo?.condition;
-        humidity.innerText = "Humidity : " + weatherInfo?.humidity + "%";
-        wind.innerText = "Wind Speed : " + weatherInfo?.wind + "k.m/h";
-        // document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + temp + "')";
+        city.innerHTML = "Weather in " + weatherInfo?.city + ", " + weatherInfo?.country;
+        temp.innerHTML = weatherInfo?.temp.toFixed(2);
+        description.innerHTML = weatherInfo?.condition;
+        humidity.innerHTML = "Humidity : " + weatherInfo?.humidity + "%";
+        wind.innerHTML = "Wind Speed : " + weatherInfo?.wind + "k.m/h";
     }
 
 
@@ -178,26 +177,31 @@
     })
 
 
-    // // 
-    // convertBtn.addEventListener('click', function (e) {
-    //     if (tempUnit.innerText === "°C") {
-    //         let temper = temp.innerText;
-    //         let newTemper = Number(temper * 9) / 5 + 32;
-    //         temp.innerText = Number(newTemper.toFixed(2));
-    //         tempUnit.innerText = "°F";
-    //         console.log(temp);
-    //         console.log(tempUnit);
-    //     }
-    //     else {
-    //         let temper = temp.innerText;
-    //         let newTemper = Number((temper - 32) * 5 / 9);
-    //         temp.innerText = Number(newTemper.toFixed(2));
-    //         tempUnit.innerText = "°C";
-    //         console.log(temp);
-    //         console.log(tempUnit);
-    //     }
-    // })
+    // 
+    convertBtn.addEventListener('click', function (e) {
 
+        if (tempUnit.innerHTML === "°C") {
+            let temper = temp.innerHTML;
+            console.log(temper);
+            let newTemper = temper * 9 / 5 + 32;
+            console.log(newTemper);
+            temp.innerHTML = newTemper.toFixed(2);
+            console.log(temp.innerHTML);
+            tempUnit.innerHTML = "°F";
+            console.log(tempUnit);
+        }
+        else if (tempUnit.innerHTML === "°F") {
+            let temper = temp.innerHTML;
+            console.log(temper);
+            let newTemper = (temper - 32) * 5 / 9;
+            console.log(newTemper);
+            temp.innerHTML = newTemper.toFixed(2);
+            console.log(temp.innerHTML);
+            tempUnit.innerHTML = "°C";
+            console.log(tempUnit);
+
+        }
+    })
 
 
     // Get data from local storage
@@ -232,5 +236,6 @@
             searchHistory.appendChild(div)
         })
     }
+
 
 })()
