@@ -155,6 +155,7 @@
                     <div class="history_detail">
                     <h4>${city}</h4>
                     <p class="history_condition">${condition}</p>
+                    <p class="history_temp">${temp.toFixed(2)}°C</p>
                     <p class="history_wind">Wind Speed : ${wind}k.m/h</p>
                     <p class="history_humidity">Humidity : ${humidity}%</p>
                     </div>
@@ -223,6 +224,7 @@
             <div class="history_detail">
             <h4>${singleHistory.city}</h4>
             <p class="history_condition">${singleHistory.condition}</p>
+            <p class="history_temp">${singleHistory.temp.toFixed(2)}°C</p>
             <p class="history_wind">Wind Speed : ${singleHistory.wind}k.m/h</p>
             <p class="history_humidity">Humidity : ${singleHistory.humidity}%</p>
             </div>
